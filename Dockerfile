@@ -6,7 +6,7 @@ WORKDIR /webapp
 
 RUN pip install -r requirements.txt
 
-COPY webapp.py /webapp
+COPY webapp.py /webapp/webapp.py
 
 ENTRYPOINT [ "python" ]
 
