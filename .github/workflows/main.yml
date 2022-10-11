@@ -1,4 +1,4 @@
-name: Deploy master
+name: Deploy Docker to Elastic
 on:
   push:
     branches:
