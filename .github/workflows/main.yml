@@ -1,8 +1,5 @@
 name: Deploy Docker to Elastic
-on:
-  push:
-    branches:
-    - master
+on: [push]
 
 jobs:
   build:
