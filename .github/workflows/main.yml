@@ -40,5 +40,5 @@ jobs:
         application_name: DockerDeployment
         environment_name: DockerDeployment-env
         region: us-east-1
-        label_version: 1234
+        version_label: 1234
         deployment_package: deploy.zip
