@@ -10,4 +10,4 @@ COPY webapp.py /webapp/webapp.py
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "app.py" ]
+CMD [ "webapp.py" ]
