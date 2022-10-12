@@ -37,7 +37,7 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: DockerDeployment
         environment_name: Dockerdeployment-env
-        version_label: "Dockerdeployment-${{ steps.format-time.outputs.replaced }}"
+        version_label: "${{ steps.timestamp.outputs.date }}"
         region: us-east-1
         deployment_package: deploy.zip
 
