@@ -34,7 +34,7 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: Webapp
+        application_name: Dockerwebapp
         environment_name: DockerDeployment-env
         version_label: "Dockerdeployment-${{ steps.format-time.outputs.replaced }}"
         region: us-east-1
