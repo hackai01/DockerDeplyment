@@ -3,21 +3,20 @@ name: Docker Image CI
 on: [push]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - 
-      name: Build the Docker image
+
+    - name: check out source code
+      uses: actions/checkout@v2
+
+    - name: Build the Docker image
       run: docker build -t ga63qes/dockerdeployment -f Dockerfile .
-    -
-      name: Generate Deployment Package
+
+    - name: Generate Deployment Package
       run: zip -r deploy.zip *
-    -
-      name: Get timestamp
+
+    - name: Get timestamp
       uses: gerred/actions/current-time@master
       id: current-time
         
@@ -35,9 +34,9 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: DockerDeployment
+        application_name: Webapp
         environment_name: DockerDeployment-env
-        version_label: "Sample Application"
+        version_label: "Dockerdeployment-${{ steps.format-time.outputs.replaced }}"
         region: us-east-1
         deployment_package: deploy.zip
 
