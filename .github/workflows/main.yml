@@ -34,8 +34,8 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: Web-app2
-        environment_name: Webapp2-env-1
+        application_name: app2
+        environment_name: App2-env
         version_label: "Dockerdeployment-${{ steps.format-time.outputs.replaced }}"
         region: us-east-1
         deployment_package: deploy.zip
