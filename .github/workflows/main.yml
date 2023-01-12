@@ -1,4 +1,4 @@
-name: Deploy Docker to Elastci Beanstalk
+name: Deploy Docker to Elastic Beanstalk
 
 on: [push]
 
